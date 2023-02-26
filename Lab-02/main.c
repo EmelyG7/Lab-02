@@ -18,20 +18,10 @@ void repeatBubbleSort(int *);
 
 int main() {
    printf("Lab-02 Prueba de funciones:\n| Selection Sort | Insertion Sort | Bubble Sort\n\n");
-   int *array=NULL, val = 1000, temp;
-//   long long int cont=0, contSwap=0;
-//   array= malloc(val* sizeof(int));
-//   temp=val;
-//   for (int i = 0; i < val; ++i) {
-//      array[i]= i;
-//   }
-//   printarray(array, val);
-//
-//   selectionSort(array, val,cont, contSwap);
-//   printarray(array, val);
+   int *array=NULL;
    repeatSelectionSort(array);
-//   repeatInsertionSort(array);
-//   repeatBubbleSort(array);
+   repeatInsertionSort(array);
+   repeatBubbleSort(array);
    return 0;
 }
 
@@ -847,7 +837,7 @@ void repeatInsertionSort(int array[])
 
          //Llenar el arreglo
          for (int j = 0; j < val; j++) { // Generar un número aleatorio entre 0 y 999
-            array[j] = val-j;
+            array[j] = rand()%val;
          }
 
          //Almacenar Datos
@@ -1522,7 +1512,7 @@ void repeatBubbleSort(int *array)
 
          //Llenar el arreglo
          for (int j = 0; j < val; j++) { // Generar un número aleatorio entre 0 y 999
-            array[j] =val-j;
+            array[j] =rand()%val;
          }
 
          //Almacenar Datos
